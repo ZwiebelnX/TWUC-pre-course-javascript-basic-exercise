@@ -5,6 +5,18 @@ export default function countCharacter(string, prediction) {
   //
   // * Please implement this function and pass all the tests in character_counter_spec.js.
   // * Please do NOT modify the signature of the function.
+  let result = 0
+  if (string != null) {
+    if (prediction != null) {
+      for (let i = 0; i < string.length; i++) {
+        if (prediction(string[i])) {
+          result++
+        }
+      }
+    } else {
+      result = string.length
+    }
+  }
 
-  throw new Error('Please delete this line and implement the function');
+  return result
 }
