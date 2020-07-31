@@ -17,7 +17,7 @@ export default function waitForAll(...promises) {
         }
     })
 
-    // Promise.allSettled() is unavailable in node.js 10.5.3
+    // Promise.allSettled() is unavailable in node.js 10.15.3
     // return new Promise((resolve, reject) => {
     //     Promise.allSettled(promises).then(results =>{
     //         results.forEach(result => {

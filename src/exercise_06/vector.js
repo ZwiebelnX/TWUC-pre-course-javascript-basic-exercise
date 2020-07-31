@@ -13,19 +13,17 @@ export default class Vector {
   // class.
 
     constructor(x, y) {
-        this.x = x
-        this.y = y
+        this._x = x
+        this._y = y
 
-        Object.defineProperty(this, 'x', {
-            writable: false
-        })
-        Object.defineProperty(this, 'y', {
-            writable: false
-        })
     }
 
-    setX() {
-        throw new Error()
+    get x() {
+        return this._x
+    }
+
+    get y() {
+        return this._y
     }
 
     static plus(v1, v2) {
